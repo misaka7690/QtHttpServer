@@ -20,19 +20,23 @@ void QtHttpServer::setui()
     window = new QWidget;
     window->setWindowTitle("QtHttpServer");
     window->setWindowIcon(QIcon("./icons/favicon.ico"));
+    
 
     // 设置主布局
     vlayout = new QVBoxLayout;
 
     // 添加信息展示框
     msg_browser = new QTextBrowser;
+    msg_browser->setStyleSheet("border-image:url(./images/3.jpg);");
+    msg_browser->setTextColor(QColor(0,0,0));
     vlayout->addWidget(msg_browser);
 
     // 添加虚拟地址选择框
     hlayout1 = new QHBoxLayout;
     addrline = new QLineEdit;
     addrbutton = new QPushButton;
-
+    addrline->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
+    addrbutton->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     addrline->setText(ROOT);
     addrbutton->setText("设置虚拟地址");
     hlayout1->addWidget(addrline);
@@ -41,11 +45,15 @@ void QtHttpServer::setui()
     // 添加监听地址框和监听端口号
     hlayout2 = new QHBoxLayout;
     ipline = new QLineEdit;
+    ipline->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     ipline->setText("127.0.0.1");
     portline = new QLineEdit;
+    portline->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     portline->setText("80");
     iplabel = new QLabel("IP地址:");
+    iplabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     portlabel = new QLabel("端口:");
+    portlabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;"); 
 
     hlayout2->addWidget(iplabel);
     hlayout2->addWidget(ipline);
@@ -57,10 +65,11 @@ void QtHttpServer::setui()
     // 添加启动按钮
     button = new QPushButton;
     button->setText("启动服务器");
+    button->setStyleSheet("background-color: green;border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     vlayout->addWidget(button);
 
     window->setLayout(vlayout);
-    window->resize(1000, 1000);
+    window->resize(1000,1000);
     window->show();
 
     msg_browser->setText(msg);
@@ -78,6 +87,7 @@ void QtHttpServer::button_clicked()
 {
     if (server_running == false)
     {
+        button->setStyleSheet("background-color: red;border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
         sendmsg("服务器启动中...");
         WSAStartup(MAKEWORD(2, 2), &wsadata);
         // 获取IP地址
@@ -142,6 +152,7 @@ void QtHttpServer::button_clicked()
     }
     else
     {
+        button->setStyleSheet("background-color: green;border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
         sendmsg("服务器关闭中...");
         // 关闭子线程
         if(SocketThread != nullptr){

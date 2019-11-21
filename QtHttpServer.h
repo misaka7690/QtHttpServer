@@ -14,6 +14,7 @@
 #include <QFileDialog>
 #include <QLabel>
 #include <QIcon> 
+#include <QColor> 
 #include <winsock2.h>
 #include "socketthread.h"
 class QtHttpServer : public QObject

@@ -34,7 +34,7 @@ void MsgThread::run(){
 
 
             QString filepath = GetUrlRequestFilePath(recv_data);
-            QString msg = QString("来自") + QString(clientIp) + QString("(端口号为") + QString(clientPort) + QString(clientPort) + QString(")的客户端请求") + filepath;
+            QString msg = QString("来自") + QString(clientIp) + QString("(端口号为") + QString::number(clientPort) + QString(")的客户端请求") + filepath;
             emit logmsg(msg);
             int filetype = judgefiletype(filepath);
 

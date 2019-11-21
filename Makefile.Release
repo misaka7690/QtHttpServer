@@ -419,6 +419,7 @@ release/moc_QtHttpServer.cpp: ../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCor
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QLabel \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qlabel.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QIcon \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QColor \
 		socketthread.h \
 		msgthread.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
@@ -976,6 +977,7 @@ release/main.o: main.cpp ../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QSt
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QLabel \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qlabel.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QIcon \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QColor \
 		socketthread.h \
 		msgthread.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
@@ -1284,6 +1286,7 @@ release/QtHttpServer.o: QtHttpServer.cpp QtHttpServer.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QLabel \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qlabel.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QIcon \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/QColor \
 		socketthread.h \
 		msgthread.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
