@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'socketthread.h'
+** Meta object code from reading C++ file 'msgthread.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.8)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../socketthread.h"
+#include "../msgthread.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'socketthread.h' doesn't include <QObject>."
+#error "The header file 'msgthread.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.9.8. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,28 +20,28 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SocketThread_t {
+struct qt_meta_stringdata_MsgThread_t {
     QByteArrayData data[4];
-    char stringdata0[25];
+    char stringdata0[22];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SocketThread_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_MsgThread_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SocketThread_t qt_meta_stringdata_SocketThread = {
+static const qt_meta_stringdata_MsgThread_t qt_meta_stringdata_MsgThread = {
     {
-QT_MOC_LITERAL(0, 0, 12), // "SocketThread"
-QT_MOC_LITERAL(1, 13, 6), // "logmsg"
-QT_MOC_LITERAL(2, 20, 0), // ""
-QT_MOC_LITERAL(3, 21, 3) // "msg"
+QT_MOC_LITERAL(0, 0, 9), // "MsgThread"
+QT_MOC_LITERAL(1, 10, 6), // "logmsg"
+QT_MOC_LITERAL(2, 17, 0), // ""
+QT_MOC_LITERAL(3, 18, 3) // "msg"
 
     },
-    "SocketThread\0logmsg\0\0msg"
+    "MsgThread\0logmsg\0\0msg"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SocketThread[] = {
+static const uint qt_meta_data_MsgThread[] = {
 
  // content:
        7,       // revision
@@ -63,10 +63,10 @@ static const uint qt_meta_data_SocketThread[] = {
        0        // eod
 };
 
-void SocketThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void MsgThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        SocketThread *_t = static_cast<SocketThread *>(_o);
+        MsgThread *_t = static_cast<MsgThread *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->logmsg((*reinterpret_cast< QString(*)>(_a[1]))); break;
@@ -75,8 +75,8 @@ void SocketThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            typedef void (SocketThread::*_t)(QString );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SocketThread::logmsg)) {
+            typedef void (MsgThread::*_t)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&MsgThread::logmsg)) {
                 *result = 0;
                 return;
             }
@@ -84,26 +84,26 @@ void SocketThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     }
 }
 
-const QMetaObject SocketThread::staticMetaObject = {
-    { &QThread::staticMetaObject, qt_meta_stringdata_SocketThread.data,
-      qt_meta_data_SocketThread,  qt_static_metacall, nullptr, nullptr}
+const QMetaObject MsgThread::staticMetaObject = {
+    { &QThread::staticMetaObject, qt_meta_stringdata_MsgThread.data,
+      qt_meta_data_MsgThread,  qt_static_metacall, nullptr, nullptr}
 };
 
 
-const QMetaObject *SocketThread::metaObject() const
+const QMetaObject *MsgThread::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SocketThread::qt_metacast(const char *_clname)
+void *MsgThread::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SocketThread.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_MsgThread.stringdata0))
         return static_cast<void*>(this);
     return QThread::qt_metacast(_clname);
 }
 
-int SocketThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int MsgThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QThread::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -121,7 +121,7 @@ int SocketThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SocketThread::logmsg(QString _t1)
+void MsgThread::logmsg(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

@@ -16,6 +16,5 @@ int main(int argc, char *argv[])
     
     QtHttpServer::instance().start();
     
-    
     return a.exec();
 }

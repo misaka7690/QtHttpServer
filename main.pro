@@ -4,6 +4,8 @@ SOURCES += QtHttpServer.cpp
 
 SOURCES += socketthread.cpp
 
+SOURCES += msgthread.cpp
+
           
 
 HEADERS += utils.h
@@ -11,6 +13,8 @@ HEADERS += utils.h
 HEADERS += QtHttpServer.h
 
 HEADERS += socketthread.h
+
+HEADERS += msgthread.h
 
 TARGET = main
 
