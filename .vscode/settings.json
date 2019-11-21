@@ -1,0 +1,30 @@
+{
+    "files.exclude": {
+        // "**.Debug": true,
+        // "**.Release": true,
+        // "**.stash": true,
+        // "**.user": true,
+        // "debug/": true,
+        // "release/": true,
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.dimInactiveRegions": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "entity.name.type",
+                "settings": {
+                    "foreground": "#961a1a",
+                    
+                }
+            },
+            {
+                "scope": "variable.other.local",
+                "settings": {
+                    "foreground": "#88461c",
+                    
+                }
+            },
+        ]
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+    <head>
+        <title>图片演示界面</title>
+        <meta charset=utf-8>
+        <meta name=format-detection content="telephone=no">
+        <meta name=screen-orientation content=portrait>
+        <meta name=x5-orientation content=portrait>
+        <meta name=apple-mobile-web-app-capable content=yes>
+        <meta class=meta-viewport name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <script>
+            /test/.test(window.location) && (document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/1.2.4/eruda.min.js"><\/script>'),
+            document.write("<script>eruda.init();<\/script>"))
+        </script>
+        <script>
+            var pageWidth, pageHeight, UA, isPC, html = document.querySelector("html");
+            function calculateRem() {
+                pageWidth = Math.max(html.getBoundingClientRect().width, window.innerWidth),
+                pageHeight = Math.max(html.getBoundingClientRect().height, window.innerHeight),
+                -1 < (UA = window.navigator.userAgent.toLowerCase()).indexOf("mobile") || -1 < UA.indexOf("android") || -1 < UA.indexOf("ucweb") || 1.2 <= pageHeight / pageWidth ? (window.isPC = !1,
+                html.style.fontSize = pageWidth / 7.5 + "px") : (window.isPC = !0,
+                html.style.fontSize = 9 * pageHeight / 16 / 7.5 + "px")
+            }
+            window.calculateRem(),
+            window.onresize = function() {
+                window.calculateRem(),
+                window.afterResize()
+            }
+        </script>
+        <script>
+            var _hmt = _hmt || [];
+            !function() {
+                var e = document.createElement("script");
+                e.src = "https://hm.baidu.com/hm.js?b9d5e8f83090c77eb822f283f7f2ce67",
+                e.setAttribute("async", "true");
+                var t = document.getElementsByTagName("script")[0];
+                t.parentNode.insertBefore(e, t)
+            }()
+        </script>
+        <style>
+            ::-webkit-scrollbar {
+                display: none
+            }
+
+            div.pc {
+                position: relative;
+                height: 100%;
+                margin: 0 auto
+            }
+
+            .pc * {
+                border-width: 1px!important
+            }
+
+            .abs {
+                position: absolute;
+                z-index: 1
+            }
+
+            .rel {
+                position: relative
+            }
+
+            .full {
+                width: 100%;
+                height: 100%
+            }
+
+            .overflow-hidden {
+                overflow: hidden
+            }
+
+            .overflow-x-hidden {
+                overflow-x: hidden;
+                overflow-y: auto
+            }
+
+            .break {
+                word-break: break-all;
+                word-wrap: break-word
+            }
+
+            body,html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background: #f3f3f3
+            }
+
+            body {
+                -webkit-text-size-adjust: 100%!important;
+                text-size-adjust: 100%!important;
+                font-size: .5rem
+            }
+
+            body.pc {
+                -webkit-transition: background 1s;
+                transition: background 1s
+            }
+
+            body.pc.white {
+                background: #f3f3f3
+            }
+           
+            body.pc0 {
+                background: #f3f3f3 url(http://a.topurl.cn/future/static/background1.jpg) center 0 no-repeat;
+                -webkit-background-size: auto 100%;
+                background-size: auto 100%
+            }
+
+            body.pc1{
+                background: #f3f3f3 url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572546907481&di=7a18110412b3604a90f539352de8879b&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F20%2F20161020154338_cxBdu.jpeg) center 0 no-repeat;
+                -webkit-background-size: auto 100%;
+                background-size: auto 100%
+            }
+
+            body.pc2 {
+                background: #f3f3f3 url(http://a.topurl.cn/future/static/background2.jpg) center 0 no-repeat;
+                -webkit-background-size: auto 100%;
+                background-size: auto 100%
+            }
+
+            body {
+                background: #f3f3f3 url(image/background2.jpg) center 0 no-repeat;
+                -webkit-background-size: auto 100%;
+                background-size: auto 100%
+            }
+
+            .qr {
+                display: none;
+                position: absolute;
+                width: 1.8rem;
+                height: 1.8rem;
+                top: .5rem;
+                right: .5rem;
+                padding: .5rem;
+                background: url(static/qr.png) center center no-repeat;
+                -webkit-background-size: 1.8rem 1.8rem;
+                background-size: 1.8rem 1.8rem;
+                opacity: .08;
+                transition: opacity .4s
+            }
+
+            .qr:hover {
+                opacity: 1
+            }
+
+            body.pc .qr {
+                display: block
+            }
+
+            #webapp_container {
+                height: 100%
+            }
+
+            .swiper-pagination .swiper-pagination-bullet {
+                background-color: transparent;
+                border: .02rem solid #fff;
+                opacity: 1;
+                width: .15rem;
+                height: .15rem;
+                margin: 0 .2rem
+            }
+
+            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                background: #fff;
+                border: .04rem solid rgba(255,255,255,.2)
+            }
+
+            .swiper-button-next,.swiper-button-prev {
+                margin-top: -.5rem!important
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <p align="center" valign="center">窗前明月光，疑似地上霜</p>
+        <p align="center" valign="center">举头望明月，低头思故乡</p> -->
+        <p align="center" valign="center"><font color="#1188ee">我很好奇</font></p>
+        <p align="center" valign="center"><font color="#aa11cc">千反田爱瑠</font></p>
+    </body>
+        
+</html>
