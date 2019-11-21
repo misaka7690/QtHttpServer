@@ -17,3 +17,5 @@ CONFIG += console
 QT += network
 
 QT += widgets
+
+LIBS += libwsock32 libws2_32

@@ -14,6 +14,7 @@
 #include <QFileDialog>
 #include <QLabel>
 #include <QIcon> 
+#include <winsock2.h>
 class QtHttpServer : public QObject
 {
     Q_OBJECT
@@ -69,6 +70,10 @@ private:
 // 服务器信息
     QString msg = "这是一个利用Qt制作的简单的HTTP服务器";
     bool server_running = false;
+
+// windows socket 信息
+    WSADATA wsadata;
+    SOCKET serversocket = INVALID_SOCKET;
 };
 
 #endif // QTHTTPSERVER_H

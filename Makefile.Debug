@@ -17,7 +17,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -g -Wall -W -Wextra -fexceptions -mth
 INCPATH       = -I. -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include\QtWidgets -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include\QtGui -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include\QtANGLE -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include\QtNetwork -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\include\QtCore -Idebug -I..\..\..\Qt\Qt5.9.8\5.9.8\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,console -mthreads
-LIBS        =        -LC:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Networkd.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Cored.a 
+LIBS        =        -lwsock32 -lws2_32 -LC:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Networkd.a C:\Qt\Qt5.9.8\5.9.8\mingw53_32\lib\libQt5Cored.a 
 QMAKE         = C:\Qt\Qt5.9.8\5.9.8\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -407,7 +407,7 @@ debug/moc_QtHttpServer.cpp: ../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/
 		QtHttpServer.h \
 		debug/moc_predefs.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.8\5.9.8\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/mkspecs/win32-g++ -IC:/vscode_workspace/space1/finaltest-qttcp -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtNetwork -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++ -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32 -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++/backward -Ic:/mingw/lib/gcc/mingw32/6.3.0/include -Ic:/mingw/include -Ic:/mingw/lib/gcc/mingw32/6.3.0/include-fixed -Ic:/mingw/mingw32/include QtHttpServer.h -o debug\moc_QtHttpServer.cpp
+	C:\Qt\Qt5.9.8\5.9.8\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/mkspecs/win32-g++ -IC:/vscode_workspace/space1/QtHttpServer -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtNetwork -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++ -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32 -Ic:/mingw/lib/gcc/mingw32/6.3.0/include/c++/backward -Ic:/mingw/lib/gcc/mingw32/6.3.0/include -Ic:/mingw/include -Ic:/mingw/lib/gcc/mingw32/6.3.0/include-fixed -Ic:/mingw/mingw32/include QtHttpServer.h -o debug\moc_QtHttpServer.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1044,7 +1044,8 @@ debug/QtHttpServer.o: QtHttpServer.cpp QtHttpServer.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QMessageBox \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qmessagebox.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QFile \
-		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDataStream
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDataStream \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QRegExp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\QtHttpServer.o QtHttpServer.cpp
 
 debug/moc_QtHttpServer.o: debug/moc_QtHttpServer.cpp 

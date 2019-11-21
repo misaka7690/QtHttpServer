@@ -8,8 +8,35 @@
 #include <QFile>
 #include<iostream>
 #include<QDataStream>
+#include<QRegExp>
 using namespace std;
 
+// 判断IP地址是否合法
+
+
+bool IP_valid(const QString& IP) {
+    QRegExp regExpIP("((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])[\\.]){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])");
+
+    if(!regExpIP.exactMatch(IP))
+    {
+        QMessageBox::information(nullptr, "Title", "IP错误", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        return 0;
+    }
+    return 1;
+}
+
+// 判断端口号是否合法
+
+bool port_valid(const QString& src)
+{
+    QRegExp reg("\\d*");
+    if(!reg.exactMatch(src))
+    {
+        QMessageBox::information(nullptr, "Title", "端口号错误", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        return 0;
+    }
+    return 1;
+}
 
 QHostAddress InputHostAddress()
 {
