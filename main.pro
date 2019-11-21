@@ -2,11 +2,15 @@ SOURCES += main.cpp
 
 SOURCES += QtHttpServer.cpp
 
+SOURCES += socketthread.cpp
+
           
 
 HEADERS += utils.h
 
 HEADERS += QtHttpServer.h
+
+HEADERS += socketthread.h
 
 TARGET = main
 
