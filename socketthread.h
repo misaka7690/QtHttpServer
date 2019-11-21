@@ -21,8 +21,7 @@ signals:
 public slots:
 private:
     SOCKET ServSock;
-    QString filepath;
-    QWidget *parent;
+    QString folderpath;
 };
 
 #endif // SOCKETTHREAD_H

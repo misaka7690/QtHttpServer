@@ -15,6 +15,7 @@
 #include <QLabel>
 #include <QIcon> 
 #include <winsock2.h>
+#include "socketthread.h"
 class QtHttpServer : public QObject
 {
     Q_OBJECT
@@ -65,6 +66,7 @@ private:
 // 服务器部件
     QTcpServer *m_httpServer;
     QString ROOT="C:/vscode_workspace/space1/finaltest-qttcp/web/";
+    SocketThread *SocketThread;
 
 
 // 服务器信息

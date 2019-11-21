@@ -136,10 +136,25 @@ void QtHttpServer::button_clicked()
         sendmsg("Socket创建成功");
         server_running = true;
         button->setText("关闭服务器");
+        SocketThread = new SocketThread(serversocket,filefolder);
+        SocketThread->start();
     }
     else
     {
         sendmsg("服务器关闭中...");
+        // 关闭子线程
+        if(SocketThread != nullptr){
+            SocketThread->requestInterruption();
+            SocketThread->terminate();
+            sendmsg("释放 SocketThread");
+            SocketThread->quit();
+            SocketThread->wait();
+            delete SocketThread;
+        }
+        
+        // 停止监听
+        closesocket(serversocket);
+
         server_running = false;
         sendmsg("服务器关闭成功!");
         button->setText("启动服务器");

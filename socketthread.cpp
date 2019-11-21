@@ -1,15 +1,13 @@
 #include "socketthread.h"
 
-SocketThread::SocketThread(SOCKET ServSock,QString path,QWidget *parent) : QThread(parent)
+SocketThread::SocketThread(SOCKET ServSock,QString path) : QThread(parent)
 {
     this->ServSock = ServSock;
-    this->filepath = path;
-    this->parent = parent;
+    this->folderpath = path;
 }
 
 SocketThread::~SocketThread()
 {
-    qDebug() << "SocketThread 析构函数";
     closesocket(ServSock);
     emit isClose();
 }
@@ -35,7 +33,7 @@ void SocketThread::run()
             //新客户端连接，通知 UI 更新界面
             emit isMsg(msg);
             //开启新线程和客户端进行通信
-            MsgThread* msgThread = new MsgThread(client,clientAddr,filepath,parent);
+            MsgThread* msgThread = new MsgThread(client,clientAddr,folderpath,parent);
             msgThread->start();
 
             connect(msgThread,&MsgThread::isMsg,this,[=](QString msg){
