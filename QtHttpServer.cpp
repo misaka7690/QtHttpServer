@@ -20,6 +20,7 @@ void QtHttpServer::setui()
     window = new QWidget;
     window->setWindowTitle("QtHttpServer");
     window->setWindowIcon(QIcon("./icons/favicon.ico"));
+    window->resize(1000,1000);
     
 
     // 设置主布局
@@ -27,8 +28,7 @@ void QtHttpServer::setui()
 
     // 添加信息展示框
     msg_browser = new QTextBrowser;
-    msg_browser->setStyleSheet("border-image:url(./images/3.jpg);");
-    msg_browser->setTextColor(QColor(0,0,0));
+    msg_browser->setStyleSheet("border-image:url(./images/3.jpg);font: bold 40px;border: 10px solid;margin-right: 20px;");
     vlayout->addWidget(msg_browser);
 
     // 添加虚拟地址选择框
@@ -36,8 +36,9 @@ void QtHttpServer::setui()
     addrline = new QLineEdit;
     addrbutton = new QPushButton;
     addrline->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
-    addrbutton->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
+    addrbutton->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;background-color:blue;color: yellow;");
     addrline->setText(ROOT);
+
     addrbutton->setText("设置虚拟地址");
     hlayout1->addWidget(addrline);
     hlayout1->addWidget(addrbutton);
@@ -51,9 +52,9 @@ void QtHttpServer::setui()
     portline->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
     portline->setText("80");
     iplabel = new QLabel("IP地址:");
-    iplabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
+    iplabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;background-color: pink;color: black");
     portlabel = new QLabel("端口:");
-    portlabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;"); 
+    portlabel->setStyleSheet("border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;background-color: pink;color: black");
 
     hlayout2->addWidget(iplabel);
     hlayout2->addWidget(ipline);
@@ -63,14 +64,23 @@ void QtHttpServer::setui()
     vlayout->addLayout(hlayout2);
 
     // 添加启动按钮
+    hlayout3 = new QHBoxLayout;
     button = new QPushButton;
     button->setText("启动服务器");
     button->setStyleSheet("background-color: green;border-style: outset;border-radius: 10px;border-color: beige;font: bold;padding: 6px;");
-    vlayout->addWidget(button);
-
+    hlayout3->addWidget(button);
+    hlayout3->setAlignment(Qt::AlignJustify);
+    vlayout->addLayout(hlayout3);
     window->setLayout(vlayout);
-    window->resize(1000,1000);
     window->show();
+
+    button->setMaximumSize(button->size());
+    // ipline->setMaximumSize(ipline->size());
+    // iplabel->setMaximumSize(iplabel->size());
+    // portline->setMaximumSize(portline->size());
+    // portlabel->setMaximumSize(portlabel->size());
+    // addrline->setMaximumSize(addrline->size());
+    // addrbutton->setMaximumSize(addrbutton->size());
 
     msg_browser->setText(msg);
 }

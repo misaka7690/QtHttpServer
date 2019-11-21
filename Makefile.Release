@@ -425,6 +425,7 @@ release/moc_QtHttpServer.cpp: ../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCor
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QTime \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDebug \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QFrame \
 		QtHttpServer.h \
 		release/moc_predefs.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/bin/moc.exe
@@ -982,7 +983,8 @@ release/main.o: main.cpp ../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QSt
 		msgthread.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QTime \
-		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDebug
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDebug \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QFrame
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/QtHttpServer.o: QtHttpServer.cpp QtHttpServer.h \
@@ -1292,6 +1294,7 @@ release/QtHttpServer.o: QtHttpServer.cpp QtHttpServer.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QTime \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QDebug \
+		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QFrame \
 		utils.h \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/QInputDialog \
 		../../../Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qinputdialog.h \

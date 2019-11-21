@@ -17,6 +17,7 @@
 #include <QColor> 
 #include <winsock2.h>
 #include "socketthread.h"
+#include <QFrame>
 class QtHttpServer : public QObject
 {
     Q_OBJECT
@@ -63,6 +64,7 @@ private:
     QLineEdit *ipline;
     QLineEdit *portline;
     
+    QHBoxLayout *hlayout3;
     
 // 服务器部件
     QTcpServer *m_httpServer;
