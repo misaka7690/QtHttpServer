@@ -74,7 +74,7 @@ void QtHttpServer::setui()
     window->setLayout(vlayout);
     window->show();
 
-    button->setMaximumSize(button->size());
+    // button->setMaximumSize(button->size());
     // ipline->setMaximumSize(ipline->size());
     // iplabel->setMaximumSize(iplabel->size());
     // portline->setMaximumSize(portline->size());
@@ -159,6 +159,7 @@ void QtHttpServer::button_clicked()
         // 信号槽连接
         connect(SocketThread,&SocketThread::logmsg,this,sendmsg);
         SocketThread->start();
+        sendmsg("服务器启动成功！！！");
     }
     else
     {
