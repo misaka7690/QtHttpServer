@@ -1,6 +1,5 @@
 #include "QtHttpServer.h"
 #include "utils.h"
-
 QtHttpServer &QtHttpServer::instance()
 {
     static QtHttpServer obj;
@@ -140,7 +139,6 @@ void QtHttpServer::button_clicked()
         // 信号槽连接
         connect(SocketThread,&SocketThread::logmsg,this,sendmsg);
         SocketThread->start();
-
     }
     else
     {
@@ -178,7 +176,7 @@ void QtHttpServer::run(const QHostAddress &address, const quint16 &port)
     if (server_running == false)
     {
         sendmsg("服务器开始启动...");
-        m_httpServer->listen(address, port);
+        // m_httpServer->listen(address, port);
         sendmsg("服务器启动成功!");
         server_running = true;
         button->setText("关闭服务器");

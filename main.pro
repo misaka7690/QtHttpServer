@@ -6,6 +6,8 @@ SOURCES += socketthread.cpp
 
 SOURCES += msgthread.cpp
 
+SOURCES += utils.cpp
+
           
 
 HEADERS += utils.h
