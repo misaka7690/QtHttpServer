@@ -44,19 +44,41 @@ void MsgThread::run(){
         // 请求网站根目录  
         if(filetype==0)
         {
-            response_html(ClientSock,"/index.html",webroot);
+            if(response_html(ClientSock,"/index.html",webroot))
+            {
+                emit logmsg("网站根目录响应成功！");
+            }
+            else
+            {
+                emit logmsg("网站根目录响应失败！");
+            }
+
         }
         
         // 请求文本文件
         if(filetype==1)
         {
-            response_html(ClientSock,filepath,webroot);
+            if(response_html(ClientSock,filepath,webroot))
+            {
+                emit logmsg("文件请求"+filepath+"响应成功！");
+            }
+            else
+            {
+                emit logmsg("文件请求"+filepath+"响应失败！");
+            }
         }
         
         if(filetype==2)
         {
-            response_img(ClientSock,filepath,webroot);
+            if(response_img(ClientSock,filepath,webroot))
+            {
+                emit logmsg("多媒体文件"+filepath+"响应成功！");
+            }
+            else
+            {
+                emit logmsg("多媒体文件"+filepath+"响应失败！");
+            }
+            
         }
-
         // emit logmsg(QString("$ 给客户端发送: %1").arg(filename));
 }
