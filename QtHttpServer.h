@@ -33,15 +33,13 @@ signals:
 
 public slots:
 private slots:
-    void newConnection();
-    void readyRead();
     void button_clicked();
     void addrbutton_clicked();
 private:
     explicit QtHttpServer(QObject *parent = nullptr);
     ~QtHttpServer();
-    void sendimage(QTcpSocket* &socket,QString &filepath);
-    void sendtext(QTcpSocket* &socket,QString &filepath);
+    // void sendimage(QTcpSocket* &socket,QString &filepath);
+    // void sendtext(QTcpSocket* &socket,QString &filepath);
     Q_DISABLE_COPY(QtHttpServer)
 private:
 // GUI 部件
@@ -68,7 +66,7 @@ private:
     
 // 服务器部件
     QTcpServer *m_httpServer;
-    QString ROOT="C:/vscode_workspace/space1/finaltest-qttcp/web/";
+    QString ROOT="C:/vscode_workspace/space1/QtHttpServer/web";
     SocketThread *SocketThread;
 
 

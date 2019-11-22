@@ -9,6 +9,7 @@
 #include<iostream>
 #include<QDataStream>
 #include<QRegExp>
+#include<winsock2.h>
 using namespace std;
 
 // 判断IP地址是否合法
@@ -35,4 +36,12 @@ QString GetUrlRequestFilePath(QString request);
 
 int judgefiletype(QString filepath);
 
+// 响应 msg
+int response_msg(SOCKET ClientSock,QString msg);
+
+// 响应文本文件
+int response_html(SOCKET ClientSock,QString filepath,QString webroot);
+
+// 响应图片文件
+int response_img(SOCKET ClientSock,QString filepath,QString webroot);
 #endif // UTILS_H
